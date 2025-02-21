@@ -40,7 +40,9 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-300 to-blue-700 p-6">
+     
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-300 to-blue-700 p-6">
+       <Link to="/"><button className="btn btn-primary m-4 px-5  rounded-lg hover:bg-blue-600 transition duration-200 shadow-md"> back</button></Link> 
       <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
         {/* Header Section */}
         <div className="flex justify-between items-center mb-6">
