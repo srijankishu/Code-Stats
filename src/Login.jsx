@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-      <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
+    <div className='flex items-center justify-center min-h-screen w-screen mx-auto m-2 '>
+      <div className="w-full max-w-md   bg-white p-8 rounded-2xl shadow-lg ">
       <div className="flex justify-between items-center mb-6">
   <h2 className="text-3xl font-semibold text-gray-800">Login</h2>
   <form method="dialog">
@@ -78,6 +79,7 @@ const Login = () => {
 </Link>
         </p>
       </div>
+    </div>
    
   );
 };
