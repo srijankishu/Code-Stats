@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Toaster, toast } from "react-hot-toast";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const Signup = () => {
       );
 
       console.log("Signup Success:", response.data);
-      setMessage("Signup successful!");
+      toast.success("Signup successful!");
       setFormData({
         name: "",
         email: "",
@@ -35,14 +36,17 @@ const Signup = () => {
       }); // Reset form fields
     } catch (error) {
       console.error("Signup Error:", error.response?.data || error.message);
-      setMessage("Signup failed! Please try again.");
+      toast.error("Signup failed! Please try again.");
     }
   };
 
   return (
      
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-300 to-blue-700 p-6">
-       <Link to="/"><button className="btn btn-primary m-4 px-5  rounded-lg hover:bg-blue-600 transition duration-200 shadow-md"> back</button></Link> 
+      <Toaster />
+       <Link to="/"> <button className="text-white bg-blue-700 px-6 py-3 rounded-lg shadow-md hover:bg-blue-600  transition-all duration-200 m-4 ">
+           Back
+         </button></Link> 
       <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
         {/* Header Section */}
         <div className="flex justify-between items-center mb-6">
